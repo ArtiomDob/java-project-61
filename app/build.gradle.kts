@@ -1,6 +1,9 @@
+import jdk.tools.jlink.resources.plugins
+
 plugins {
     id("java")
     application
+    id("checkstyle")
 }
 
 group = "hexlet.code"
@@ -31,9 +34,7 @@ application {
     // Входная точка
     mainClass.set("hexlet.code.App")
 }
-{
-    id 'checkstyle'
-}
+
 
 
 
