@@ -1,9 +1,9 @@
-import jdk.tools.jlink.resources.plugins
+
 
 plugins {
     id("java")
     application
-    id("checkstyle")
+    checkstyle
 }
 
 group = "hexlet.code"
