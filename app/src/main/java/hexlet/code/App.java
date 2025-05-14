@@ -21,7 +21,7 @@ public class App {
 
         switch (choice) {
             case 1:
-                Greet.start(scanner);
+                hexlet.code.Greet.start(scanner);
                 break;
             case 2:
                 Even.start(scanner);

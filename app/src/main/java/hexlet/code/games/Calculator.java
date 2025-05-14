@@ -61,7 +61,6 @@ public class Calculator {
     private static final int ROUNDS_COUNT = 3; // Количество раундов
     private static final Random random = new Random();
 
-    // Метод для запуска всей игры
     public static void start(Scanner scanner) {
         System.out.println("Welcome to the Brain Calculator Game!");
         System.out.print("May I have your name? ");
@@ -79,7 +78,6 @@ public class Calculator {
         System.out.printf("Congratulations, %s!\n", name);
     }
 
-    // Метод для одного раунда
     public static boolean playRound(Scanner scanner) {
         int num1 = random.nextInt(100) + 1;
         int num2 = random.nextInt(100) + 1;
