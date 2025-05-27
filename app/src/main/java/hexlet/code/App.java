@@ -12,7 +12,7 @@ import hexlet.code.Engine;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        //запускается меню выбираем игру
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -21,7 +21,8 @@ public class App {
         System.out.println("0 - Exit");
 
         System.out.print("Your choice: ");
-        int choice = Integer.parseInt(scanner.nextLine());
+        int choice = Integer.parseInt(scanner.nextLine()); //надимаем
+        // выбирается игра через свич
 
          switch (choice) {
             case 1:
@@ -31,13 +32,11 @@ public class App {
                 Engine.runGame("even", scanner);
                break;
             case 3:
-
-               // String name = scanner.nextLine().trim();
                 Engine.runGame("calc", scanner);
                 break;
-            case 4:
-                Engine.runGame("gcd", scanner);
-                break;
+           // case 4:
+             //   Engine.runGame("gcd", scanner);
+             //   break;
             case 0:
                 System.exit(0);
                 break;
