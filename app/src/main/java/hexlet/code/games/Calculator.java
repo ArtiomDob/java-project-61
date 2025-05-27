@@ -150,6 +150,9 @@ public class Calculator {
             } catch (RuntimeException e) {
                 return false;
             }
+            if (!userAnswerStr.equals(correctAnswerStr)) {
+                return false;
+            }
         }
         return false;
     }
