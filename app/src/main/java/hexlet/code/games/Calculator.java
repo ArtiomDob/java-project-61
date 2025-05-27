@@ -14,8 +14,8 @@ public class Calculator {
         int correctAnswers = 0;
 
         for (int i = 0; i < ROUNDS_COUNT; i++) {
-            int num1 = random.nextInt();
-            int num2 = random.nextInt();
+            int num1 = random.nextInt(101);
+            int num2 = random.nextInt(101);
             char operation = operations[random.nextInt(operations.length)];
 
             System.out.println("Question: " + num1 + " " + operation + " " + num2);

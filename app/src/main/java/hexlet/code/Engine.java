@@ -32,9 +32,9 @@ public class Engine {
                 case "calc":
                     hexlet.code.games.Calculator.start(scanner, name);
                     break;
-                // case "gcd":
-                //    hexlet.code.games.GCD.start(scanner);
-                //   break;
+                 case "gcd":
+                    hexlet.code.games.GCD.start(scanner, name);
+                   break;
 
                 default:
                     System.out.println("Unknown game");
