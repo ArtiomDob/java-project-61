@@ -157,5 +157,17 @@ public class Calculator {
         return false;
     }
 }
-
+//if (userAnswer == correctAnswer) {
+      //  System.out.println("Correct!");
+//correctAnswers++;
+      //  } else {
+      //  System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+            //    System.out.println("Let's try again, " + name + "!");
+           //     return;
+               //         }
+              //          }
+//
+              //           System.out.println("Congratulations, " + name + "!");
+ //   }
+    //        }
 
