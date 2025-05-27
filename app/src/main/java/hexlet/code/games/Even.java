@@ -6,12 +6,7 @@ import java.util.Scanner;
 public class Even {
     private static final int ROUNDS_COUNT = 3;
 
-    public static void start(Scanner scanner) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String name = scanner.nextLine().trim();
-        System.out.println("Hello, " + name + "!");
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    public static void start(Scanner scanner, String name) {
 
         Random random = new Random();
 
@@ -19,17 +14,17 @@ public class Even {
             int number = random.nextInt(100);
             String correctAnswer = (number % 2 == 0) ? "yes" : "no";
 
-            System.out.printf("Question: %d%n", number);
             System.out.print("Your answer: ");
+            System.out.println("Question: " + number + "!");
             String userAnswer = scanner.nextLine().trim().toLowerCase();
 
             if (!userAnswer.equals(correctAnswer)) {
-                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.%n", userAnswer, correctAnswer);
-                System.out.printf("Let's try again, %s!%n", name);
-                return;
+                System.out.print(userAnswer + " is wrong answer ;(. Correct answer was " + correctAnswer + "\n");
+                System.out.println("Let's try again " + name + "!");
+               // return;
             }
             System.out.println("Correct!");
         }
-        System.out.printf("Congratulations, %s!%n", name);
+        System.out.println("Congratulations, " + name + "!");
     }
 }

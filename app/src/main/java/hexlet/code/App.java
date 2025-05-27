@@ -2,8 +2,10 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-import hexlet.code.games.Even;
-import hexlet.code.games.Calculator;
+//import hexlet.code.games.Even;
+//import hexlet.code.games.Calculator;
+import hexlet.code.games.Greet;
+import hexlet.code.Engine;
 
 
 public class App {
@@ -14,21 +16,27 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+       // System.out.println("4 - GCD");
         System.out.println("0 - Exit");
 
         System.out.print("Your choice: ");
         int choice = Integer.parseInt(scanner.nextLine());
 
-        switch (choice) {
+         switch (choice) {
             case 1:
-                hexlet.code.Greet.start(scanner);
-                break;
+               Greet.start(scanner);
+               break;
             case 2:
-                Even.start(scanner);
-                break;
+                Engine.runGame("even", scanner);
+               break;
             case 3:
-                Calculator.start(scanner);
+
+               // String name = scanner.nextLine().trim();
+                Engine.runGame("calc", scanner);
                 break;
+           // case 4:
+               // GCD.start(scanner);
+              //  break;
             case 0:
                 System.exit(0);
                 break;
