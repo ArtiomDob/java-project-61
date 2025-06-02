@@ -115,7 +115,7 @@ public class Engine {
         if (userAnswer.equals(correctAnswerStr)) {
             System.out.println("Correct!");
             correctAnswersCount++;
-            if (correctAnswersCount >= ROUNDS_COUNT) {
+            if (correctAnswersCount == ROUNDS_COUNT) {
                 System.out.println("Congratulations, " + userName + "!");
             }
         } else {
