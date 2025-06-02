@@ -65,7 +65,7 @@ public class Engine {
 
     private static final int ROUNDS_COUNT = 3;
     private static int correctAnswersCount = 0;
-    private static final Scanner SCANNER = new Scanner(System.in);
+   private static final Scanner SCANNER = new Scanner(System.in);
 
     public static void runGame(String gameName, Scanner scanner) {
         System.out.println("Welcome to the Brain Games!");
@@ -86,7 +86,7 @@ public class Engine {
             //    break;
             default:
                 System.out.println("Unknown game");
-                return;
+               // return;
         }
         // if (correctAnswersCount >= ROUNDS_COUNT) {
         // System.out.println("Congratulations, " + name + "!");
@@ -111,12 +111,12 @@ public class Engine {
     // }
 //}
 
-    public static void examination(String userAnswer, String correctAnswerStr, String userName) {
-        if (userAnswer.equals(correctAnswerStr)) {
+    public static void examination(String userAnswer, String correctAnswerStr, String userName) {// проверяем
+        if (userAnswer.equals(correctAnswerStr)) {//сравниваем
             System.out.println("Correct!");
             correctAnswersCount++;
-            if (correctAnswersCount == ROUNDS_COUNT) {
-                System.out.println("Congratulations, " + userName + "!");
+            if (correctAnswersCount == ROUNDS_COUNT) {//когда количество правильных ответов сравняется с количесвом раундов
+                System.out.println("Congratulations, " + userName + "!");// если правильно три раза
             }
         } else {
             System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswerStr + "'.");
