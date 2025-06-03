@@ -29,6 +29,9 @@ public class Engine {
              case "gcd":
                 hexlet.code.games.GCD.start(scanner, name);
                 break;
+            case "pro":
+                hexlet.code.games.Progression.start(scanner, name);
+                break;
             default:
                 System.out.println("Unknown game");
 
