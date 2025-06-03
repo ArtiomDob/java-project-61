@@ -34,9 +34,9 @@ public class App {
             case 3:
                 Engine.runGame("calc", scanner);
                 break;
-           // case 4:
-             //   Engine.runGame("gcd", scanner);
-             //   break;
+            case 4:
+                Engine.runGame("gcd", scanner);
+                break;
             case 0:
                 System.exit(0);
                 break;

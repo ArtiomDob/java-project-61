@@ -9,6 +9,7 @@ public class Calculator {
     private static final int ROUNDS_COUNT = 3;
 
     public static boolean start(Scanner scanner, String name) {
+        System.out.println("What is the result of the expression?");
         Random random = new Random();
         char[] operations = {'+', '-', '*'};
 

@@ -3,6 +3,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calculator;
 import hexlet.code.games.Even;
+//import hexlet.code.games.GDC;
 
 import java.util.Scanner;
 
@@ -25,9 +26,9 @@ public class Engine {
             case "calc":
                 hexlet.code.games.Calculator.start(scanner, name);
                 break;
-            //  case "gcd":
-            //    hexlet.code.games.GCD.start(scanner, name);
-            //    break;
+             case "gcd":
+                hexlet.code.games.GCD.start(scanner, name);
+                break;
             default:
                 System.out.println("Unknown game");
 
