@@ -1,12 +1,14 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
     private static final int ROUNDS_COUNT = 3;
 
-    public static void start(Scanner scanner, String name) {
+    public static boolean start(Scanner scanner, String name) {
 
         Random random = new Random();
 
@@ -18,13 +20,26 @@ public class Even {
             System.out.println("Question: " + number + "!");
             String userAnswer = scanner.nextLine().trim().toLowerCase();
 
-            if (!userAnswer.equals(correctAnswer)) {
-                System.out.print(userAnswer + " is wrong answer ;(. Correct answer was " + correctAnswer + "\n");
-                System.out.println("Let's try again " + name + "!");
-               // return;
+          //   if (!userAnswer.equals(correctAnswer)) {
+           //   System.out.print(userAnswer + " is wrong answer ;(. Correct answer was " + correctAnswer + "\n");
+           //    System.out.println("Let's try again " + name + "!");
+
+         //    }
+         //   System.out.println("Correct!");
+        //    }
+        //     System.out.println("Congratulations, " + name + "!");
+        //     }
+//}
+               try {
+               Engine.examination(userAnswer, correctAnswer, name);
+            } catch (RuntimeException e) {
+                return false;
             }
-            System.out.println("Correct!");
+            if (!userAnswer.equals(correctAnswer)) {
+                return false;
+            }
         }
-        System.out.println("Congratulations, " + name + "!");
+
+        return false;
     }
 }

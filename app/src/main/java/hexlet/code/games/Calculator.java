@@ -18,9 +18,11 @@ public class Calculator {
             int num2 = random.nextInt(101);
             char operation = operations[random.nextInt(operations.length)];
 
-            System.out.println("Question: " + num1 + " " + operation + " " + num2);
-            System.out.print("Your answer: ");
-            String userAnswerStr = scanner.nextLine().trim();
+            String question = num1 + " " + operation + " " + num2;
+
+            // System.out.println("Question: " + num1 + " " + operation + " " + num2);
+            //System.out.print("Your answer: ");
+           // String userAnswer = scanner.nextLine().trim();
 
             int correctAnswer;
             switch (operation) {
@@ -39,12 +41,11 @@ public class Calculator {
 
             String correctAnswerStr = Integer.toString(correctAnswer);
 
-            try {
-                Engine.examination(userAnswerStr, correctAnswerStr, name);
-            } catch (RuntimeException e) {
-                return false;
-            }
-            if (!userAnswerStr.equals(correctAnswerStr)) {
+
+          boolean  examinationResult = Engine.examination(question, correctAnswerStr, name);
+
+           // if (!examinationResult.equals(correctAnswerStr)) {
+            if (!examinationResult) {
                 return false;
             }
         }

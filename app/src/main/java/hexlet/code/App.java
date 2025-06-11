@@ -19,6 +19,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
 
         System.out.print("Your choice: ");
@@ -38,8 +39,11 @@ public class App {
             case 4:
                 Engine.runGame("gcd", scanner);
                 break;
-             case 5:
+                case 5:
                  Engine.runGame("pro", scanner);
+                 break;
+             case 6:
+                 Engine.runGame("prime", scanner);
                  break;
             case 0:
                 System.exit(0);
