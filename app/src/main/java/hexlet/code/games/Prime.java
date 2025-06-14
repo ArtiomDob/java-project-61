@@ -15,34 +15,17 @@ public class Prime {
         for (int i = 0; i < ROUNDS_COUNT; i++) {
             int number = random.nextInt(100);
             String question = Integer.toString(number);
-             System.out.println("Question: " + question);
-             System.out.print("Your answer: ");
-            String userAnswer = scanner.nextLine().trim();
-            //boolean question = Prime(number) ? "yes" : "no";
             String correctAnswer = Prime(number) ? "yes" : "no";
 
-             try {
-                Engine.examination(userAnswer, correctAnswer, name);
-            } catch (RuntimeException e) {
-               return false;
-             }
 
-            if (!userAnswer.equals(correctAnswer)) {
+            boolean examinationResult = Engine.examination(question, correctAnswer, name);
+
+            if (!examinationResult) {
                 return false;
-             }
-              }
-                  return false;
-
-             }
-           // boolean examinationResult = Engine.examination(question, correctAnswerStr, name);
-
-
-           // if (!examinationResult) {
-               // return false;
-           // }
-       // }
-        //return false;
-    //}
+            }
+        }
+        return false;
+    }
     private static boolean Prime(int num) {
         if (num < 2) {
             return false;

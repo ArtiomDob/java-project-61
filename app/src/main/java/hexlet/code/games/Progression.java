@@ -20,29 +20,21 @@ public class Progression {
             String question = progressionData[0];
             String correctAnswer = progressionData[1];
 
-            System.out.println("Question: " + question);
-            System.out.print("Your answer: ");
-            String userAnswerStr = scanner.nextLine().trim();
+            boolean examinationResult = Engine.examination(question, correctAnswer, name);
 
-            try {
-                Engine.examination(userAnswerStr, correctAnswer, name);
-            } catch (RuntimeException e) {
-                return false;
-            }
-            if (!userAnswerStr.equals(correctAnswer)) {
+            if (!examinationResult) {
                 return false;
             }
         }
-
         return false;
     }
 
     private static String[] generateProgression(Random rand) {
         int length = rand.nextInt(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH; // длина от 5 до 10
-        int start = rand.nextInt(20); // стартовое число (можно увеличить диапазон)
+        int start = rand.nextInt(20); // стартовое число
         int step = rand.nextInt(10) + 1; // шаг прогрессии (от 1 до 10)
 
-        int hiddenPosition = rand.nextInt(length); // позиция пропуска
+        int hiddenPosition = rand.nextInt(length); // точка пропуска
 
         StringBuilder progressionBuilder = new StringBuilder();
         String correctAnswer = "";

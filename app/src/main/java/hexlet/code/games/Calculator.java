@@ -20,10 +20,6 @@ public class Calculator {
 
             String question = num1 + " " + operation + " " + num2;
 
-            // System.out.println("Question: " + num1 + " " + operation + " " + num2);
-            //System.out.print("Your answer: ");
-           // String userAnswer = scanner.nextLine().trim();
-
             int correctAnswer;
             switch (operation) {
                 case '+':
@@ -44,8 +40,7 @@ public class Calculator {
 
           boolean  examinationResult = Engine.examination(question, correctAnswerStr, name);
 
-           // if (!examinationResult.equals(correctAnswerStr)) {
-            if (!examinationResult) {
+          if (!examinationResult) {
                 return false;
             }
         }
