@@ -1,13 +1,7 @@
 package hexlet.code;
 
 import java.util.Scanner;
-
-//import hexlet.code.games.Even;
-//import hexlet.code.games.Calculator;
-//import hexlet.code.games.GCD;
 import hexlet.code.games.Greet;
-import hexlet.code.Engine;
-
 
 public class App {
     public static void main(String[] args) {
@@ -39,10 +33,10 @@ public class App {
             case 4:
                 Engine.runGame("gcd", scanner);
                 break;
-                case 5:
-                 Engine.runGame("pro", scanner);
+            case 5:
+                Engine.runGame("pro", scanner);
                  break;
-             case 6:
+            case 6:
                  Engine.runGame("prime", scanner);
                  break;
             case 0:

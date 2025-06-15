@@ -1,10 +1,6 @@
 
 package hexlet.code;
 
-//import hexlet.code.games.Calculator;
-//import hexlet.code.games.Even;
-//import hexlet.code.games.GDC;
-
 import java.util.Scanner;
 
 public class Engine {
@@ -21,7 +17,6 @@ public class Engine {
 
         switch (gameName) {
             case "even":
-                //Even.start(scanner, name);
                 hexlet.code.games.Even.start(scanner, name);
                 break;
             case "calc":
