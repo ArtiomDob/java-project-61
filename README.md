@@ -7,3 +7,4 @@
  https://asciinema.org/connect/9c2df007-4782-4a7d-936a-c94778af82a8
 https://asciinema.org/a/XS4iNDNZUlHGDH0G0P5CGWXMr
  https://asciinema.org/a/cAVZckfaas1pqht4jgJT7NtOZ
+<img width="1280" alt="Снимок экрана 2025-06-16 000028" src="https://github.com/user-attachments/assets/01acffd4-ce80-4340-b85a-89b02d5fc3e0" />
