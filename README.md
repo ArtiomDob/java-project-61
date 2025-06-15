@@ -8,3 +8,6 @@
 https://asciinema.org/a/XS4iNDNZUlHGDH0G0P5CGWXMr
  https://asciinema.org/a/cAVZckfaas1pqht4jgJT7NtOZ
 <img width="1280" alt="Снимок экрана 2025-06-16 000028" src="https://github.com/user-attachments/assets/01acffd4-ce80-4340-b85a-89b02d5fc3e0" />
+<img width="1280" alt="Снимок экрана 2025-06-16 000615" src="https://github.com/user-attachments/assets/1fad715b-0ce4-4d26-9cc7-7a26f701cfac" />
+<img width="1280" alt="Снимок экрана 2025-06-16 000955" src="https://github.com/user-attachments/assets/afe0a834-d82f-4a60-bf85-1a6670b665c1" />
+
