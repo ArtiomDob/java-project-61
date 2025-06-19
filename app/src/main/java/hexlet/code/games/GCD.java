@@ -1,13 +1,16 @@
 package hexlet.code.games;
 
+import static hexlet.code.Engine.ROUNDS_COUNT;
+
 import java.util.Random;
 import java.util.Scanner;
+//import java.util.Scanner;
 import hexlet.code.Engine;
 
 public class GCD {
-    private static final int ROUNDS_COUNT = 3;
 
-    public static boolean start(Scanner scanner, String name) {
+
+    public static boolean start(String name) {
         System.out.println("Find the greatest common divisor of given numbers.");
 
         Random random = new Random();
@@ -17,10 +20,10 @@ public class GCD {
             int num2 = random.nextInt(100) + 1;
             String question = num1 + " " + num2;
 
-            int correctAnswer = countingGCD(num1, num2);
+            int correctAnswer = countGCD(num1, num2);
             String correctAnswerStr = Integer.toString(correctAnswer);
 
-            boolean examinationResult = Engine.examination(question, correctAnswerStr, name);
+            boolean examinationResult = Engine.examine(question, correctAnswerStr, name);
 
             if (!examinationResult) {
                 return false;
@@ -29,13 +32,13 @@ public class GCD {
         return false;
     }
 
-    private static int countingGCD(int a, int b) {
-     while (b != 0) {
-       int temp = b;
-       b = a % b;
-      a = temp;
-     }
-     return a;
+    private static int countGCD(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
     }
 }
 

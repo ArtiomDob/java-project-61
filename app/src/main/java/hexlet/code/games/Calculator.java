@@ -1,14 +1,17 @@
 
 package hexlet.code.games;
 
+import static hexlet.code.Engine.ROUNDS_COUNT;
+
 import java.util.Random;
 import java.util.Scanner;
+
 import hexlet.code.Engine;
 
 public class Calculator {
-    private static final int ROUNDS_COUNT = 3;
 
-    public static boolean start(Scanner scanner, String name) {
+
+    public static boolean start(String name) {
         System.out.println("What is the result of the expression?");
         Random random = new Random();
         char[] operations = {'+', '-', '*'};
@@ -38,9 +41,9 @@ public class Calculator {
             String correctAnswerStr = Integer.toString(correctAnswer);
 
 
-          boolean  examinationResult = Engine.examination(question, correctAnswerStr, name);
+            boolean examinationResult = Engine.examine(question, correctAnswerStr, name);
 
-          if (!examinationResult) {
+            if (!examinationResult) {
                 return false;
             }
         }

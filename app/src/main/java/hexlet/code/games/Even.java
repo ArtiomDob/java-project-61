@@ -1,14 +1,15 @@
 package hexlet.code.games;
 
+import static hexlet.code.Engine.ROUNDS_COUNT;
+
 import hexlet.code.Engine;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
-    private static final int ROUNDS_COUNT = 3;
 
-    public static boolean start(Scanner scanner, String name) {
+    public static boolean start(String name) {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Random random = new Random();
 
@@ -17,7 +18,7 @@ public class Even {
             String correctAnswer = (number % 2 == 0) ? "yes" : "no";
             String question = number + "!";
 
-            boolean examinationResult = Engine.examination(question, correctAnswer, name);
+            boolean examinationResult = Engine.examine(question, correctAnswer, name);
 
             if (!examinationResult) {
                 return false;

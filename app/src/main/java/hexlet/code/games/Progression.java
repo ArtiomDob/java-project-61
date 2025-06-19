@@ -1,16 +1,19 @@
 
 package hexlet.code.games;
 
+import static hexlet.code.Engine.ROUNDS_COUNT;
+
 import java.util.Random;
 import java.util.Scanner;
+
 import hexlet.code.Engine;
 
 public class Progression {
-    private static final int ROUNDS_COUNT = 3;
     private static final int MIN_LENGTH = 5;   // Минимальная длина прогрессии
     private static final int MAX_LENGTH = 10;  // Максимальная длина прогрессии
+    private static final int ROUNDS_COUNT = 3;
 
-    public static boolean start(Scanner scanner, String name) {
+    public static boolean start(String name) {
         System.out.println("What number is missing in the progression?");
 
         Random rand = new Random();
@@ -20,7 +23,7 @@ public class Progression {
             String question = progressionData[0];
             String correctAnswer = progressionData[1];
 
-            boolean examinationResult = Engine.examination(question, correctAnswer, name);
+            boolean examinationResult = Engine.examine(question, correctAnswer, name);
 
             if (!examinationResult) {
                 return false;
