@@ -5,7 +5,8 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ArtiomDob_java-project-61&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ArtiomDob_java-project-61)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ArtiomDob_java-project-61&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ArtiomDob_java-project-61)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ArtiomDob_java-project-61&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ArtiomDob_java-project-61)
-[Посмотреть анимацию](https://asciinema.org/a/9c2df007-4782-4a7d-936a-c94778af82a8)
+[Посмотреть анимацию на asciinema.org](https://asciinema.org/a/9c2df007-4782-4a7d-936a-c94778af82a8)
+![Анимация](https://asciinema.org/a/9c2df007-4782-4a7d-936a-c94778af82a8.png)
  https://asciinema.org/connect/9c2df007-4782-4a7d-936a-c94778af82a8
 https://asciinema.org/a/XS4iNDNZUlHGDH0G0P5CGWXMr
  https://asciinema.org/a/cAVZckfaas1pqht4jgJT7NtOZ
