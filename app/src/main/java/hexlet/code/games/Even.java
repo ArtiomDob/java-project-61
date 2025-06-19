@@ -5,9 +5,9 @@ import static hexlet.code.Engine.ROUNDS_COUNT;
 import hexlet.code.Engine;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Even {
+
 
     public static boolean start(String name) {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");

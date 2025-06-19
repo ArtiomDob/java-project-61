@@ -4,14 +4,13 @@ package hexlet.code.games;
 import static hexlet.code.Engine.ROUNDS_COUNT;
 
 import java.util.Random;
-import java.util.Scanner;
 
 import hexlet.code.Engine;
 
 public class Progression {
     private static final int MIN_LENGTH = 5;   // Минимальная длина прогрессии
     private static final int MAX_LENGTH = 10;  // Максимальная длина прогрессии
-    private static final int ROUNDS_COUNT = 3;
+
 
     public static boolean start(String name) {
         System.out.println("What number is missing in the progression?");

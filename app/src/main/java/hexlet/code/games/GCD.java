@@ -3,8 +3,7 @@ package hexlet.code.games;
 import static hexlet.code.Engine.ROUNDS_COUNT;
 
 import java.util.Random;
-import java.util.Scanner;
-//import java.util.Scanner;
+
 import hexlet.code.Engine;
 
 public class GCD {

@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import java.util.Random;
-import java.util.Scanner;
 
 import static hexlet.code.Engine.ROUNDS_COUNT;
 
