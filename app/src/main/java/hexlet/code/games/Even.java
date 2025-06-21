@@ -1,29 +1,28 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.ROUNDS_COUNT;
+import java.util.Random;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
+import java.util.Scanner;
 
 public class Even {
+    private static boolean instructionShown = false;
 
+    public static boolean start(String name, Scanner scanner) {
+        if (!instructionShown) {
+            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+            instructionShown = true;
+        }
 
-    public static boolean start(String name) {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Random random = new Random();
 
-        for (int i = 0; i < ROUNDS_COUNT; i++) {
-            int number = random.nextInt(100);
-            String correctAnswer = (number % 2 == 0) ? "yes" : "no";
-            String question = number + "!";
+        int number = random.nextInt(100); // один вопрос за раз
+        String correctAnswer = (number % 2 == 0) ? "yes" : "no";
+        String question = Integer.toString(number);
 
-            boolean examinationResult = Engine.examine(question, correctAnswer, name);
+        boolean result = Engine.examine(question, correctAnswer, name, scanner);
 
-            if (!examinationResult) {
-                return false;
-            }
-        }
-        return false;
+        return result;
     }
 }

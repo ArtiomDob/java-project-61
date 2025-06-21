@@ -1,4 +1,3 @@
-
 package hexlet.code;
 
 import java.util.Scanner;
@@ -6,7 +5,6 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // меню выбора игры
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -24,23 +22,22 @@ public class App {
                 Cli.start(scanner);
                 break;
             case 2:
-                Engine.runGame("even");
+                Engine.runGame("even", scanner);
                 break;
             case 3:
-                Engine.runGame("calc");
+                Engine.runGame("calc", scanner);
                 break;
             case 4:
-                Engine.runGame("gcd");
+                Engine.runGame("gcd", scanner);
                 break;
             case 5:
-                Engine.runGame("pro");
+                Engine.runGame("pro", scanner);
                 break;
             case 6:
-                Engine.runGame("prime");
+                Engine.runGame("prime", scanner);
                 break;
             case 0:
-                System.exit(0);
-                break;
+                return;
             default:
                 System.out.println("Invalid choice.");
         }

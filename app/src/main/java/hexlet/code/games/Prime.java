@@ -2,35 +2,26 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-import static hexlet.code.Engine.ROUNDS_COUNT;
+import java.util.Scanner;
 
 import hexlet.code.Engine;
 
 public class Prime {
+    private static boolean instructionShown = false;
 
+    public static boolean start(String name, Scanner scanner) {
+        if (!instructionShown) {
+            System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+            instructionShown = true;
 
-    //public static boolean start(String name,String rounds[][]) {
-    public static boolean start(String name) {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        }
 
         Random random = new Random();
-        for (int i = 0; i < ROUNDS_COUNT; i++) {
-            //  for (String[]round : rounds) {
-            //    String question = round[0];
-            //   String correctAnswer = round[1];
-            int number = random.nextInt(100);
-            String question = Integer.toString(number);
-            String correctAnswer = isPrime(number) ? "yes" : "no";
+        int number = random.nextInt(100);
+        String question = Integer.toString(number);
+        String correctAnswer = isPrime(number) ? "yes" : "no";
 
-
-            boolean examinationResult = Engine.examine(question, correctAnswer, name);
-            //массив строк
-
-            if (!examinationResult) {
-                return false;
-            }
-        }
-        return false;
+        return Engine.examine(question, correctAnswer, name, scanner);
     }
 
     private static boolean isPrime(int num) {
