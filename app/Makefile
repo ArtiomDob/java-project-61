@@ -13,6 +13,8 @@ install:
 	./gradlew clean install
 
 run-dist:
+	@echo "Используемая Java:"
+	@java -version
 	./build/install/app/bin/app
 
 run:

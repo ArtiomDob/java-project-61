@@ -34,7 +34,9 @@ application {
     // Входная точка
     mainClass.set("hexlet.code.App")
 }
-
-
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
 
 
